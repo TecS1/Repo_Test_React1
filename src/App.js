@@ -1,10 +1,14 @@
-//import './_App.scss';
-import PdfText from './PdfTest1';
+import './_App.scss';
+import PdfTest from './PdfTest1';
 
 export default function App() {
   return (
     <>
-      <PdfText/>
+      <div className='main-container'>
+        <PdfTest/>
+      </div>
+
+      <div className='cuadrito'/>
     </>
   );
 }

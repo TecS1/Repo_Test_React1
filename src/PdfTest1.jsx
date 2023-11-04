@@ -1,20 +1,24 @@
 import React from "react";
-import {useRef, useEffect} from 'react';
+import {useEffect} from 'react';
 import "./_PdfTest1.scss"
 
-export default function PdfText() {
+export default function PdfTest() {
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry =>{
-            entry.target.classList.toggle("show", entry.isIntersecting)
+            var the_element = entry.target.children[0]
+            //var the_element = entry.target
+            the_element.classList.toggle("show", entry.isIntersecting)
         })
     },{
-        threshold: 0.5
+        root: document.querySelector(".card-container"),
+        threshold: 1,
     })
 
     useEffect(() => {
-        const cards = document.querySelectorAll(".card")
-        
+        const cards = document.querySelectorAll(".container-inv")
+        //const cards = document.querySelectorAll(".card")
+
         cards.forEach(card =>{            
             observer.observe(card)
         })
@@ -22,23 +26,60 @@ export default function PdfText() {
 
     return(
         <div className="card-container">
-            <div className="card">This is the first card</div>
-            <div className="card">This is a card</div>
-            <div className="card">This is a card</div>
-            <div className="card">This is a card</div>
-            <div className="card">This is a card</div>
-            <div className="card">This is a card</div>
-            <div className="card">This is a card</div>
-            <div className="card">This is a card</div>
-            <div className="card">This is a card</div>
-            <div className="card">This is a card</div>
-            <div className="card">This is a card</div>
-            <div className="card">This is a card</div>
-            <div className="card">This is a card</div>
-            <div className="card">This is a card</div>
-            <div className="card">This is a card</div>
-            <div className="card">This is a card</div>
-            <div className="card">This is the last card</div>
+            <div className="container-inv">
+                <div className="card">This is the first card</div>
+            </div>
+            <div className="container-inv">
+                <div className="card">This is a card</div>
+            </div>            
+            <div className="container-inv">
+                <div className="card">This is a card</div>
+            </div>            
+            <div className="container-inv">
+                <div className="card">This is a card</div>
+            </div>            
+            <div className="container-inv">
+                <div className="card">This is a card</div>
+            </div>            
+            <div className="container-inv">
+                <div className="card">This is a card</div>
+            </div>            
+            <div className="container-inv">
+                <div className="card">This is a card</div>
+            </div>            
+            <div className="container-inv">
+                <div className="card">This is a card</div>
+            </div>            
+            <div className="container-inv">
+                <div className="card">This is a card</div>
+            </div>            
+            <div className="container-inv">
+                <div className="card">This is a card</div>
+            </div>            
+            <div className="container-inv">
+                <div className="card">This is a card</div>
+            </div>            
+            <div className="container-inv">
+                <div className="card">This is a card</div>
+            </div>            
+            <div className="container-inv">
+                <div className="card">This is a card</div>
+            </div>            
+            <div className="container-inv">
+                <div className="card">This is a card</div>
+            </div>            
+            <div className="container-inv">
+                <div className="card">This is a card</div>
+            </div>            
+            <div className="container-inv">
+                <div className="card">This is a card</div>
+            </div>            
+            <div className="container-inv">
+                <div className="card">This is a card</div>
+            </div>
+            <div className="container-inv">
+                <div className="card">This is the last card</div>
+            </div>
         </div>
     );
 }

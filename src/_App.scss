@@ -1,0 +1,11 @@
+.main-container{
+    display: flex;
+    justify-content: center;
+}
+
+.cuadrito{
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    transform: translateY(300px);
+}
