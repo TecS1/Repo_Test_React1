@@ -6,7 +6,8 @@
     gap: 1rem;
     padding: 10px 10px;
     align-items: flex-start;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .container-inv{
